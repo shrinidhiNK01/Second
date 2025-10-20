@@ -5,31 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .god {
+        body{
             background-color: black;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
+            text-align: center;
+            
         }
-        p{
-            font-size: 60px;
-            font-family: Verdana, Geneva, Tahoma, sans-serif
+        .h1{
+            color: red;
         }
+        input{
+            margin: 10px;
+        }
+        .btn{
+            color: rgb(255, 255, 255);
+            background-color: rgb(73, 11, 241);
+        }
+        .res{
+            color: yellow;
+            margin-top: 20px;
+        }
+        
     </style>
 </head>
 <body>
-    <h1>I am god, god is great</h1>
-    <button class="god">Who am i</button>
-    <h1 class="p"></h1>
+    <h1 class="h1">Red Lights Club Entry</h1>
+    <input type="text" name="" class="in1" placeholder="Enter Your age">
+    <br>
+    <input type="text" name="" class="in2" placeholder="Enter Your couple's age">
+    <br>
+    <br>
+    <button class="btn">Check result</button>
+    <h1 class="res"></h1>
 
     <script>
-        const god=document.querySelector(".god")
-        const p=document.querySelector(".p")
+        const btn=document.querySelector(".btn")
+        btn.addEventListener("click",func)
 
-        god.addEventListener("click",()=>{
-            p.textContent="I am Hero"
-        })
+        function func(){
+            let age1=document.querySelector(".in1").value
+            let age2=document.querySelector(".in2").value
+            let res=document.querySelector(".res")
+
+            let first=parseInt(age1)
+            let second=parseInt(age2)
+
+            if(first>=18&& second>=18){
+                res.innerText="🥳Wellcome Cute Couples"
+            }
+            else if(first>=18&& second<18 ){
+                res.innerText="😜😜Bring other Girl bro"
+            }
+            else if(first<18&& second>=18 ){
+                res.innerText="😜😜Bring other Boy babes"
+            }
+            else if(first<18&& second<18 ){
+                res.innerText="😡😡Naughty horaye ho, bahen ke loude"
+            }
+
+            
+        }
+        func()
+
     </script>
+
+
+    
 </body>
 </html>
