@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .god {
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        p{
+            font-size: 60px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif
+        }
+    </style>
+</head>
+<body>
+    <h1>I am god, god is great</h1>
+    <button class="god">Who am i</button>
+    <h1 class="p"></h1>
+
+    <script>
+        const god=document.querySelector(".god")
+        const p=document.querySelector(".p")
+
+        god.addEventListener("click",()=>{
+            p.textContent="I am Villain"
+        })
+    </script>
+</body>
+</html>
